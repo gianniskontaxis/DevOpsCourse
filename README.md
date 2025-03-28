@@ -81,5 +81,5 @@ The `Vagrantfile` is configured to:
 *   **Public network issues:** If you have problems with the public network, ensure that your network adapter is properly configured and that your firewall allows bridged connections. You might need to configure your network adapter in VirtualBox settings to allow bridging.
 *   **`vagrant up` failing:** Look closely at the output of `vagrant up`. It will often provide error messages that can help diagnose the problem (e.g., network issues, permission problems, etc.).
 
-## Contributing
+
 
