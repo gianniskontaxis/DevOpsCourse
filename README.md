@@ -49,7 +49,7 @@ Before you begin, ensure you have the following installed:
 
     *   **Public Network:**  If your `Vagrantfile`'s `public_network` line is uncommented *and* your network configuration allows it, the VM will obtain an IP address from your network's DHCP server. You can determine this IP address by running `ip addr` inside the VM after you've SSH'd in, and then access the website using that IP address. Note that this will make your VM visible to other devices on your network.
 
-    *   **Private Network:** Use `http://192.168.56.28` in your web browser. This relies on the  `config.vm.network "private_network", ip: "192.168.56.28"` line in the Vagrantfile to set up the private network.
+    *   **Private Network:** The `Vagrantfile` configures a private network.  To access the web server via the private network, you'll need to determine the IP address assigned to the VM on that network. After you SSH into the VM (`vagrant ssh`), run the command `ip addr` (or `ifconfig` on older systems) to list the network interfaces and their IP addresses. Look for the interface associated with the private network (it might be named something like `eth1` or `enp0s8`) and its corresponding IP address.  Then, use that IP address in your web browser. This approach isolates the VM's network traffic to your host machine.
 
 *   **Exploring the Website Files:** After SSH'ing into the VM, you'll find the website files in the `/var/www/html/` directory. You can modify these files to experiment with web development.
 
